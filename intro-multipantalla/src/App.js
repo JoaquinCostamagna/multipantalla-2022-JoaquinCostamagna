@@ -1,11 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+function saludo(fullName){
+  return(
+    <h1>Hola {fullName}!</h1>
+  )
+}
+
+function App({nombre, apellido}) {
+  let nombreCompleto = nombre + " " + apellido;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        {saludo(nombreCompleto)}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
