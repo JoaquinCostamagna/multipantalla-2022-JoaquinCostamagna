@@ -8,12 +8,12 @@ function Saludo({nombre, apellido}){
   )
 }
 
-function App(params) {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Saludo nombre={params.nombre} apellido={params.apellido}> </Saludo>
+        <Saludo nombre={props.nombre} apellido={props.apellido}> </Saludo>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
