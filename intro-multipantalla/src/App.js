@@ -2,19 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 
 
-function saludo(fullName){
+function Saludo({nombre, apellido}){
   return(
-    <h1>Hola {fullName}!</h1>
+    <h1>Hola {nombre} {apellido}!</h1>
   )
 }
 
-function App({nombre, apellido}) {
-  let nombreCompleto = nombre + " " + apellido;
+function App(params) {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {saludo(nombreCompleto)}
+        <Saludo nombre={params.nombre} apellido={params.apellido}> </Saludo>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
