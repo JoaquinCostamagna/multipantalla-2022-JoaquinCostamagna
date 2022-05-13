@@ -13,7 +13,7 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Saludo nombre={props.nombre} apellido={props.apellido}> </Saludo>
+        <Saludo nombre={props.nombre} apellido={props.apellido}/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
