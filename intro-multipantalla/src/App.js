@@ -1,14 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Toggle from './toggle';
 
-
-function Saludo({nombre, apellido}){
+function Saludo(props){
+  const {nombre, apellido} = props;
   return(
     <h1>Hola {nombre} {apellido}!</h1>
   )
 }
 
 function App(props) {
+
+  const [onOff, setOnOff] = useState('On');
+  function toggleButton(){
+      if (onOff == 'On') {
+          setOnOff('Off');
+      }
+      else setOnOff('On');
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -26,6 +37,7 @@ function App(props) {
           Learn React
         </a>
       </header>
+      <Toggle onToggleClick={toggleButton}  text={onOff} />
     </div>
   );
 }
