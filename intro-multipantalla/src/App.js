@@ -12,12 +12,9 @@ function Saludo(props){
 
 function App(props) {
 
-  const [onOff, setOnOff] = useState('On');
+  const [onOff, setOnOff] = useState(true);
   function toggleButton(){
-      if (onOff == 'On') {
-          setOnOff('Off');
-      }
-      else setOnOff('On');
+      setOnOff(!onOff);
   }
 
   return (
@@ -36,8 +33,8 @@ function App(props) {
         >
           Learn React
         </a>
+        <Toggle onToggleClick={toggleButton}  text={onOff? 'On': 'Off'} />
       </header>
-      <Toggle onToggleClick={toggleButton}  text={onOff} />
     </div>
   );
 }
