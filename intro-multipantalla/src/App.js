@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import Toggle from './toggle';
+import Clock from './Clock';
 
 function Saludo(props){
   const {nombre, apellido} = props;
@@ -36,8 +37,10 @@ function App(props) {
         >
           Learn React
         </a>
+        <Toggle onToggleClick={toggleButton}  text={onOff} />
+        <Clock/>
       </header>
-      <Toggle onToggleClick={toggleButton}  text={onOff} />
+
     </div>
   );
 }
