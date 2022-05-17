@@ -1,6 +1,6 @@
 function Toggle(props){
     return (
-        <button onClick={props.onToggleClick}>{props.text}</button>
+        <button className={props.className} onClick={props.onToggleClick}>{props.text}</button>
     )
 }
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-function Clock(){
+function Clock(props){
     const [date, setDate] = useState(new Date());
     useEffect(() =>{
         function tick(){
@@ -9,11 +9,11 @@ function Clock(){
         }
 
         const timerId = setInterval(()=>{
-            tick();
+            if(props.tick) tick();
         }, 1000);
         
         return () => clearInterval(timerId);
-    })
+    },[props.tick])
 
     return(
         <h2>{date.toLocaleTimeString()}</h2>

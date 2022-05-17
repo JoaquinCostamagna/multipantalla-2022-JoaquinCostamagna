@@ -34,8 +34,8 @@ function App(props) {
         >
           Learn React
         </a>
-        <Toggle onToggleClick={toggleButton}  text={onOff? 'On': 'Off'} />
-        <Clock/>
+        <Clock tick={onOff}/>
+        <Toggle onToggleClick={toggleButton} className={onOff? 'blue':'red'} text={onOff? 'On': 'Off'} />
       </header>
     </div>
   );

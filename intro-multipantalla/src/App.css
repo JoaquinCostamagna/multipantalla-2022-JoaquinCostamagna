@@ -28,6 +28,25 @@
   color: #61dafb;
 }
 
+button {
+   background: rgb(80,80,80);
+   color: #eeee;
+   border: none;
+   font-size: 1.5rem;
+   min-width: 5rem;
+   text-decoration: none;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blue {
+  background: #61dafb;
+  color: #282c34;
+}
+
+.red {
+  background: rgb(231, 53, 73);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
